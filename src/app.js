@@ -25,7 +25,7 @@ let generateRandomNumber = () => {
 
 // Funcion para obtener un palo al azar (de 1 a 4)
 let generateRandomSuit = () => {
-  let suits = ["diamond", "spade", "heart", "club"];
+  let suits = ["♦", "♠", "♥", "♣"];
   let randomIndex = Math.floor(Math.random() * suits.length);
   return suits[randomIndex];
 };
@@ -36,10 +36,19 @@ function generateCard() {
   const cardSuitTop = document.getElementById("card-suit-top");
   const cardSuitBottom = document.getElementById("card-suit-bottom");
 
-  cardNumber.textContent = generateRandomNumber();
   const randomSuit = generateRandomSuit();
-  cardSuitTop.classList.add(`${randomSuit}`);
-  cardSuitBottom.classList.add(`${randomSuit}`);
+  cardNumber.textContent = generateRandomNumber();
+
+  // Cambia el color de los palos segun el tipo
+
+  if (randomSuit === "♥" || randomSuit === "♦") {
+    cardSuitTop.style.color = cardSuitBottom.style.color = "red";
+  } else {
+    cardSuitTop.style.color = cardSuitBottom.style.color = "black";
+  }
+
+  cardSuitTop.textContent = `${randomSuit}`;
+  cardSuitBottom.textContent = `${randomSuit}`;
 }
 
 // Llama a la función al cargar la página

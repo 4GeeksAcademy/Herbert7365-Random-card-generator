@@ -26,20 +26,3 @@ body {
   background-color: white;
   border: none;
 }
-
-.spade::before {
-  content: "♠";
-}
-
-.club::before {
-  content: "♣";
-}
-
-.heart::before {
-  content: "♥";
-  color: red;
-}
-
-.diamond::before {
-  content: "♦";
-}
