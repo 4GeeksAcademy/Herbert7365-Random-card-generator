@@ -1,1 +1,45 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+
+/* Estilos personalizados para las cartas */
+.classContainer {
+  margin-top: 50px;
+}
+
+.card {
+  width: 18rem;
+  height: 25.6875rem;
+  border: 1px solid #000;
+  margin: auto;
+  font-size: 80px;
+  color: black;
+}
+
+.cardHeader {
+  background-color: white;
+  border: none;
+}
+
+.cardFooter {
+  background-color: white;
+  border: none;
+}
+
+.spade::before {
+  content: "♠";
+}
+
+.club::before {
+  content: "♣";
+}
+
+.heart::before {
+  content: "♥";
+  color: red;
+}
+
+.diamond::before {
+  content: "♦";
+}
